@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vyhledávání Google</title>
+</head>
+<body>
+  <h1>Vyhledávání Google</h1>
+  <form id="search-form">
+    <input type="text" id="keyword-input" placeholder="Zadejte klíčové slovo">
+    <button type="submit">Vyhledat</button>
+  </form>
+
+  <script>
+    document.getElementById('search-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var keyword = document.getElementById('keyword-input').value;
+      var url = 'https://www.google.com/search?q=' + encodeURIComponent(keyword);
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
